@@ -3,10 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>NitroHub</title>
+
+    <link rel="stylesheet" href="./assets/css/theme.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <script src="./assets/js/main.js"></script>
   </head>
   <body>
-    <h1>selling nitros</h1>
-    <h2>temporary in maintanance</h2>
+    <header>
+      <h1><a href="/">NitroHub</a></h1>
+      <button type="button" class="btn" onclick="goToAnchor('#shop')">
+        Shop
+      </button>
+    </header>
+    <main>
+      <h2>The place to get the cheapest Nitro in town!</h2>
+      <img src="./assets/img/nitro.webp" alt="Discord Nitro" class="nitro" />
+    </main>
+    <main class="shop flex-center flex-col">
+      <a id="shop"></a>
+      <h3>1 Month Links</h3>
+      <div class="grid">
+        <div>Package 1</div>
+        <div>Package 2</div>
+        <div>Package 3</div>
+        <div>Package 4</div>
+        <div>Package 5</div>
+      </div>
+      <h3>Server Boosts</h3>
+      <div class="grid">
+        <div>Boost 1</div>
+        <div>Boost 2</div>
+        <div>Boost 3</div>
+        <div>Boost 4</div>
+        <div>Boost 5</div>
+      </div>
+    </main>
   </body>
 </html>

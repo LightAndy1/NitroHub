@@ -1,0 +1,96 @@
+body {
+  background-color: var(--background);
+  margin: 0;
+}
+
+header {
+  border-bottom: 1px solid #2c2533;
+  max-height: 75px;
+  place-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+header h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+}
+
+header button {
+  width: 6.5em;
+  height: 2.3em;
+  margin: 0.5em;
+  background: var(--accent);
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+header button:hover {
+  color: black;
+}
+
+header button:after {
+  content: "";
+  background: var(--primary);
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+header button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: calc(100vh / 4) 100px;
+}
+
+main .nitro {
+  width: 500px;
+  height: auto;
+}
+
+.shop .grid {
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 10px;
+}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Alexandria:700|Anek%20Gujarati:400");
+
+:root {
+  --text: #eae3f3;
+  --background: #140c1c;
+  --primary: #bca3d7;
+  --secondary: #793464;
+  --accent: #b85b82;
+}
+
+body,
+button {
+  font-family: "Anek Gujarati";
+  font-weight: 400;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  font-family: "Alexandria";
+  font-weight: 700;
+  color: var(--text);
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 5.652rem; /* 90.4px */
+}
+
+h2 {
+  font-size: 3.997rem; /* 64px */
+}
+
+h3 {
+  font-size: 2.827rem; /* 45.28px */
+}
+
+h4 {
+  font-size: 1.999rem; /* 32px */
+}
+
+h5 {
+  font-size: 1.414rem; /* 22.56px */
+}
+
+small {
+  font-size: 0.707rem; /* 11.36px */
+}
