@@ -311,6 +311,10 @@ main.faq {
   margin-bottom: 50px;
 }
 
+div.faq {
+  max-width: calc(100vw / 3.33);
+}
+
 .question {
   color: var(--primary);
 }
