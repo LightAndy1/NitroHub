@@ -8,7 +8,7 @@ function goToAnchor(anchor) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 600) {
     const bottomTwo = document.getElementById("bottomTwo");
     bottomTwo.classList.remove("center");
   }
