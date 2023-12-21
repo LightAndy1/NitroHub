@@ -81,7 +81,13 @@ main {
   place-items: center;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  margin: calc(100vh / 4) 100px;
+  margin: calc(100vh / 4) calc(100vw / 6);
+}
+
+main h4 {
+  margin-top: -50px;
+  color: var(--primary);
+  font-size: 20px;
 }
 
 main .nitro {
@@ -90,13 +96,14 @@ main .nitro {
 }
 
 .shop .grid {
-  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 25px;
 }
 
-.shop .grid.grid1 {
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 25px;
+.shop .grid .center {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
 }
 
 .package {
@@ -118,8 +125,8 @@ main .nitro {
   height: 224px;
   background-color: #1d1724;
   border-radius: 10px;
-  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
   padding: 15px;
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
 .package2:hover {
@@ -127,6 +134,10 @@ main .nitro {
   border-radius: 18px;
   border-bottom-left-radius: 33px;
   border-bottom-right-radius: 33px;
+}
+
+.package4 {
+  margin-right: 25px;
 }
 
 div h5 {
@@ -182,4 +193,90 @@ button.buy:active {
 
 .package .lower {
   transform: translateY(88px);
+}
+
+span.deal {
+  text-decoration: line-through;
+  background: none;
+}
+
+/*? Testimonials */
+
+main.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.testimonials .card {
+  background-color: #1d1724;
+  padding: 2rem;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
+  max-width: 350px;
+  min-width: 250px;
+  transition: box-shadow 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.testimonials .card:hover {
+  box-shadow: 0 30px 40px -12px rgba(5, 5, 5, 0.5);
+}
+
+.testimonials .header {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.testimonials .header .image {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  background-color: royalblue;
+}
+
+.testimonials .stars {
+  display: flex;
+  justify-content: center;
+  grid-gap: 0.125rem;
+  gap: 0.125rem;
+}
+
+.testimonials .stars img {
+  height: 1rem;
+  width: 1rem;
+}
+
+.testimonials .name {
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.testimonials .message {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 1rem;
+}
+
+.testimonials .card:nth-child(1) .image {
+  background-image: url("/assets/img/pfp1.webp");
+  background-size: 64px 64px;
+}
+
+.testimonials .card:nth-child(2) .image {
+  background-image: url("/assets/img/pfp2.webp");
+  background-size: 64px 64px;
+}
+
+.testimonials .card:nth-child(3) .image {
+  background-image: url("/assets/img/pfp3.gif");
+  background-size: 64px 64px;
 }

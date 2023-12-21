@@ -20,17 +20,75 @@
       </button>
     </header>
     <main>
-      <h2>The place to get the cheapest Nitro in town!</h2>
+      <div>
+        <h2>The place to get the cheapest Nitro in town!</h2>
+        <h4>Cheap Discord Nitro and Server Boosts!</h4>
+      </div>
       <img src="./assets/img/nitro.webp" alt="Discord Nitro" class="nitro" />
     </main>
+
+    <!--? Testimonials -->
+    <h2 class="flex-center">Testimonials</h2>
+    <main class="testimonials">
+      <div class="card">
+        <div class="header">
+          <div class="image"></div>
+          <div>
+            <div class="stars">
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+            </div>
+            <p class="name">nachore</p>
+          </div>
+        </div>
+        <p class="message">thanks brother ++rep</p>
+      </div>
+      <div class="card">
+        <div class="header">
+          <div class="image"></div>
+          <div>
+            <div class="stars">
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+            </div>
+            <p class="name">bogdii.__</p>
+          </div>
+        </div>
+        <p class="message">+rep thank u for lvl2</p>
+      </div>
+      <div class="card">
+        <div class="header">
+          <div class="image"></div>
+          <div>
+            <div class="stars">
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/star.svg" alt="Star" />
+              <img src="./assets/img/noStar.svg" alt="Star" />
+            </div>
+            <p class="name">light_axi</p>
+          </div>
+        </div>
+        <p class="message">+rep thx</p>
+      </div>
+    </main>
+
+    <!--* Shop  -->
     <main class="shop flex-center flex-col">
       <a id="shop"></a>
       <h3>1 Month Links</h3>
       <div class="grid grid1">
         <div class="package">
           <div class="package2">
-            <h5>Basic package</h5>
-            You get 10 links with one-month Discord Nitro.
+            <h5>Single package</h5>
+            You get a link with one-month Nitro.
             <div class="flex-center lower">
               <button
                 type="button"
@@ -38,7 +96,23 @@
                 class="buy"
                 onclick="buy(this)"
               >
-                <span>Buy</span>
+                <span>Buy - $3</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="package">
+          <div class="package2">
+            <h5>Generous package</h5>
+            You get 10 links with one-month Nitro.
+            <div class="flex-center lower">
+              <button
+                type="button"
+                id="premiumBuy"
+                class="buy"
+                onclick="buy(this)"
+              >
+                <span>Buy - $9</span>
               </button>
             </div>
           </div>
@@ -46,7 +120,7 @@
         <div class="package">
           <div class="package2">
             <h5>Premium package</h5>
-            You get 50 links with one-month Discord Nitro.
+            You get 100 links with one-month Nitro.
             <div class="flex-center lower">
               <button
                 type="button"
@@ -54,23 +128,7 @@
                 class="buy"
                 onclick="buy(this)"
               >
-                <span>Buy</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="package">
-          <div class="package2">
-            <h5>Deluxe package</h5>
-            You get 100 links with one-month Discord Nitro.
-            <div class="flex-center lower">
-              <button
-                type="button"
-                id="premiumBuy"
-                class="buy"
-                onclick="buy(this)"
-              >
-                <span>Buy</span>
+                <span>Buy - $19</span>
               </button>
             </div>
           </div>
@@ -78,11 +136,88 @@
       </div>
       <h3>Server Boosts</h3>
       <div class="grid">
-        <div class="package"><div class="package2">Boost 1</div></div>
-        <div class="package"><div class="package2">Boost 2</div></div>
-        <div class="package"><div class="package2">Boost 3</div></div>
-        <div class="package"><div class="package2">Boost 4</div></div>
-        <div class="package"><div class="package2">Boost 5</div></div>
+        <div class="package">
+          <div class="package2">
+            <h5>2 Boosts</h5>
+            You get 2 boosts to reach level 1 for your Server.
+            <div class="flex-center lower">
+              <button
+                type="button"
+                id="premiumBuy"
+                class="buy"
+                onclick="buy(this)"
+              >
+                <span>Buy - $3</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="package">
+          <div class="package2">
+            <h5>7 Boosts</h5>
+            You get 7 boosts to reach level 2 for your server.
+            <div class="flex-center lower">
+              <button
+                type="button"
+                id="premiumBuy"
+                class="buy"
+                onclick="buy(this)"
+              >
+                <span>Buy - $6</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="package">
+          <div class="package2">
+            <h5>14 Boosts</h5>
+            You get 14 boosts to reach level 3 for your server.
+            <div class="flex-center lower">
+              <button
+                type="button"
+                id="premiumBuy"
+                class="buy"
+                onclick="buy(this)"
+              >
+                <span>Buy - $13</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="center">
+          <div class="package package4">
+            <div class="package2">
+              <h5>30 Boosts</h5>
+              You get 30 boosts for your server.
+              <div class="flex-center lower">
+                <button
+                  type="button"
+                  id="premiumBuy"
+                  class="buy"
+                  onclick="buy(this)"
+                >
+                  <span>Buy - $29</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="package">
+            <div class="package2">
+              <h5>50 Boosts</h5>
+              You get 50 boosts for your server.
+              <div class="flex-center lower">
+                <button
+                  type="button"
+                  id="premiumBuy"
+                  class="buy"
+                  onclick="buy(this)"
+                >
+                  <span>Buy - $49</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>
