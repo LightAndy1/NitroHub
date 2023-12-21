@@ -99,6 +99,11 @@ main .nitro {
   height: auto;
 }
 
+main.shop {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
 .shop .grid {
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 25px;
@@ -212,6 +217,7 @@ main.testimonials {
   grid-gap: 1.5rem;
   gap: 1.5rem;
   margin-top: 3rem;
+  margin-bottom: 100px;
 }
 
 .testimonials .card {
