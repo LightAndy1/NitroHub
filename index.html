@@ -47,9 +47,12 @@
   <body>
     <header>
       <h1><a href="/">NitroHub</a></h1>
-      <button type="button" class="btn" onclick="goToAnchor('#shop')">
-        Shop
-      </button>
+      <div class="buttons flex-row">
+        <button tpye="button" onclick="goToAnchor('#faq')">FAQ</button>
+        <button type="button" class="shop" onclick="goToAnchor('#shop')">
+          Shop
+        </button>
+      </div>
     </header>
     <main>
       <div>
@@ -247,6 +250,9 @@
         </div>
       </div>
     </main>
+
+    <!--^ FAQ  -->
+    <a id="faq"></a>
     <main class="faq flex-col">
       <h2>Frequently Asked Questions</h2>
       <div class="faq">

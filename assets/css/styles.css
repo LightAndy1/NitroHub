@@ -41,10 +41,11 @@ a {
 }
 
 header button {
-  width: 6.5em;
+  width: 3em;
   height: 2.3em;
   margin: 0.5em;
-  background: var(--accent);
+  background: var(--primary);
+  color: black;
   border: none;
   border-radius: 0.625em;
   font-size: 20px;
@@ -56,16 +57,16 @@ header button {
 }
 
 header button:hover {
-  color: black;
+  color: white;
 }
 
 header button:after {
   content: "";
-  background: var(--primary);
+  background: var(--secondary);
   position: absolute;
   z-index: -1;
-  left: -20%;
-  right: -20%;
+  left: -25%;
+  right: -25%;
   top: 0;
   bottom: 0;
   transform: skewX(-45deg) scale(0, 1);
@@ -74,6 +75,17 @@ header button:after {
 
 header button:hover:after {
   transform: skewX(-45deg) scale(1, 1);
+}
+
+header button.shop {
+  width: 5em;
+  background: var(--accent);
+  color: white;
+}
+
+header button.shop:after {
+  left: -20%;
+  right: -20%;
 }
 
 main {
@@ -291,7 +303,7 @@ main.testimonials {
   background-size: 64px 64px;
 }
 
-/*~ FAQ */
+/*^ FAQ */
 
 main.faq {
   margin: 0 25px;
@@ -347,6 +359,10 @@ main.faq {
   }
 
   /** Shop */
+  main.shop {
+    margin-bottom: 33px;
+  }
+
   .grid {
     display: flex;
     flex-direction: column;
@@ -361,7 +377,7 @@ main.faq {
     margin-bottom: 75px;
   }
 
-  /*~ FAQ */
+  /*^ FAQ */
 
   .answer.last {
     margin-bottom: 35px;
