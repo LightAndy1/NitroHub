@@ -383,6 +383,10 @@ div.faq {
 
   /*^ FAQ */
 
+  div.faq {
+    max-width: none;
+  }
+
   .answer.last {
     margin-bottom: 35px;
   }
