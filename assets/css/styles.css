@@ -107,8 +107,6 @@ main h4 {
 }
 
 main .nitro {
-  width: 500px;
-  height: auto;
   animation: wumpus 5s ease-in-out infinite;
 }
 
