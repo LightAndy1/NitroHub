@@ -16,6 +16,10 @@ header h1 {
   margin: 0;
 }
 
+header h1 a {
+  color: var(--text);
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -332,8 +336,16 @@ div.faq {
   color: var(--secondary);
 }
 
-/*^ Phone View */
+.answer a {
+  color: #ac4a8e;
+  transition: color 0.25s cubic-bezier(0, 0, 0, 1);
+}
 
+.answer a:hover {
+  color: #B32287;
+}
+
+/*^ Phone View */
 @media only screen and (max-width: 600px) {
   header h1 {
     font-size: 33px;
