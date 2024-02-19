@@ -6,3 +6,16 @@ function goToAnchor(anchor) {
   };
   window.scrollTo(scrollOptions);
 }
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+window.addEventListener("scroll", function () {
+  document
+    .querySelector(".back-top")
+    .classList.toggle("hidden", window.pageYOffset <= 100);
+});
