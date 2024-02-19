@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Alexandria:700|Anek%20Gujarati:400");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Anek+Gujarati:wdth,wght@75..125,100..800&display=swap");
 
 :root {
   --text: #eae3f3;
   --background: #140c1c;
-  --primary: #bca3d7;
-  --secondary: #793464;
-  --accent: #b85b82;
+  --q: #bca3d7;
+  --a: #793464;
+  --primary: #9575ff;
+  --secondary: #a631c0;
+  --accent: #cc326f;
 }
 
 body,

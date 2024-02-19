@@ -6,10 +6,3 @@ function goToAnchor(anchor) {
   };
   window.scrollTo(scrollOptions);
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.innerWidth < 600) {
-    const bottomTwo = document.getElementById("bottomTwo");
-    bottomTwo.classList.remove("center");
-  }
-});

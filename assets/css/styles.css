@@ -1,6 +1,8 @@
 body {
   background-color: var(--background);
   margin: 0;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 header {
@@ -37,7 +39,11 @@ header h1 a {
 }
 
 .grid {
-  display: grid;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 300px;
 }
 
 a {
@@ -110,7 +116,8 @@ main h4 {
   margin-bottom: 0;
 }
 
-main .nitro {
+img.nitro {
+  z-index: -1;
   animation: wumpus 5s ease-in-out infinite;
 }
 
@@ -124,20 +131,14 @@ main .nitro {
   }
 }
 
+/** Shop  */
 main.shop {
   margin-top: 100px;
   margin-bottom: 150px;
 }
 
-.shop .grid {
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 25px;
-}
-
-.shop .grid .center {
-  grid-column: span 3;
-  display: flex;
-  justify-content: center;
+main.shop h3 {
+  text-align: center;
 }
 
 .package {
@@ -163,6 +164,16 @@ main.shop {
   transition: all 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
+.package2 a {
+  cursor: pointer;
+  color: #ff89ff;
+  transition: color 0.25s cubic-bezier(0, 0, 0, 1);
+}
+
+.package2 a:hover {
+  color: #ff00ff;
+}
+
 .package2:hover {
   transform: scale(0.98);
   border-radius: 18px;
@@ -186,7 +197,7 @@ button.buy {
   border-radius: 50px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 5px 30px -5px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #fff;
   display: flex;
   font-size: 18px;
   justify-content: center;
@@ -217,6 +228,22 @@ button span {
   transition: background 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
+button span.price {
+  background: none;
+  width: 50px;
+  color: #000;
+  font-weight: 900;
+  transform: translateY(2px);
+}
+
+button span.price.old {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.67);
+  padding: 0;
+  padding-left: 7.5px;
+  margin-right: -12.5px;
+}
+
 button.buy:hover span {
   background: none;
 }
@@ -229,18 +256,64 @@ button.buy:active {
   transform: translateY(88px);
 }
 
-span.deal {
-  text-decoration: line-through;
-  background: none;
+.ribbon {
+  background: linear-gradient(90deg, #c81d77, #6710c2);
+  background-size: 400%;
+  border-radius: 5px;
+  padding: 2px 5px 0 5px;
+  transform: translate(150px, -60px) rotate(-5deg);
+  margin-bottom: -20px;
+  animation: rotate 7.5s ease-in-out infinite,
+    gradient 7.5s ease-in-out infinite;
+  transition: box-shadow 0.25s cubic-bezier(0, 0, 0, 1);
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.ribbon:hover {
+  box-shadow: 0px 0px 25px 0px rgba(200, 29, 119, 0.5);
+}
+
+.ribbon.bad {
+  background: linear-gradient(90deg, #c11e38, #220b34);
+  background-size: 400%;
+}
+
+.ribbon.bad:hover {
+  box-shadow: 0px 0px 25px 0px rgba(193, 30, 56, 0.5);
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(150px, -60px) rotate(-10deg);
+  }
+  50% {
+    transform: translate(150px, -60px) rotate(0deg);
+  }
+  100% {
+    transform: translate(150px, -60px) rotate(-10deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*? Testimonials */
-
 main.testimonials {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1.5rem;
+  display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 3rem;
   margin-bottom: 100px;
 }
@@ -248,16 +321,16 @@ main.testimonials {
 .testimonials .card {
   background-color: #1d1724;
   padding: 2rem;
-  max-width: 320px;
+  width: 250px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
-  max-width: 350px;
-  min-width: 250px;
-  transition: box-shadow 0.25s cubic-bezier(0, 0, 0, 1);
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
 .testimonials .card:hover {
   box-shadow: 0 30px 40px -12px rgba(5, 5, 5, 0.5);
+  transform: scale(1.01);
 }
 
 .testimonials .header {
@@ -272,7 +345,7 @@ main.testimonials {
   width: 4rem;
   border-radius: 9999px;
   object-fit: cover;
-  background-color: royalblue;
+  background-image: url("/assets/img/noPfp.webp");
 }
 
 .testimonials .stars {
@@ -301,6 +374,13 @@ main.testimonials {
   margin-top: 1rem;
 }
 
+.testimonials .product {
+  position: absolute;
+  transform: translateY(-25px);
+  font-size: small;
+  font-weight: 300;
+}
+
 .testimonials .card:nth-child(1) .image {
   background-image: url("/assets/img/pfp1.webp");
   background-size: 64px 64px;
@@ -312,12 +392,11 @@ main.testimonials {
 }
 
 .testimonials .card:nth-child(3) .image {
-  background-image: url("/assets/img/pfp3.webp");
+  background-image: url("/assets/img/pfp3.gif");
   background-size: 64px 64px;
 }
 
 /*^ FAQ */
-
 main.faq {
   margin: 0 25px;
   margin-top: 25px;
@@ -328,12 +407,16 @@ div.faq {
   max-width: calc(100vw / 3.33);
 }
 
+.faq h2 {
+  text-align: center;
+}
+
 .question {
-  color: var(--primary);
+  color: var(--q);
 }
 
 .answer {
-  color: var(--secondary);
+  color: var(--a);
 }
 
 .answer a {
@@ -342,7 +425,42 @@ div.faq {
 }
 
 .answer a:hover {
-  color: #B32287;
+  color: #b32287;
+}
+
+/*^ Small screens */
+@media only screen and (max-width: 1610px) {
+  /** Shop */
+  main.shop .grid.four {
+    margin-bottom: 250px;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  /** Shop */
+  main.shop .grid.three {
+    margin-bottom: 250px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  img.nitro {
+    position: absolute;
+    /* top: calc(50vh - 67px); */
+    right: 0;
+    opacity: 0.75;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /** Shop */
+  main.shop .grid.three {
+    margin-bottom: 550px;
+  }
+
+  main.shop .grid.four {
+    margin-bottom: 825px;
+  }
 }
 
 /*^ Phone View */
@@ -363,12 +481,16 @@ div.faq {
     font-size: xx-large;
   }
 
+  main h3 {
+    text-align: center;
+  }
+
   main h4 {
     font-size: medium;
     margin: 0;
   }
 
-  main .nitro {
+  img.nitro {
     height: 200px;
     width: auto;
     position: absolute;
@@ -383,32 +505,36 @@ div.faq {
     margin-top: 63px;
   }
 
+  /*? Testimonials */
+  main.testimonials {
+    margin-bottom: 0;
+  }
+
   /** Shop */
   main.shop {
+    margin-top: 33px;
     margin-bottom: 33px;
   }
 
-  .grid {
-    display: flex;
-    flex-direction: column;
+  main.shop .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    gap: 25px;
+    margin-bottom: 825px;
   }
 
-  .package4 {
-    margin-right: 0;
-    margin-bottom: 25px;
+  main.shop .grid.three {
+    margin-bottom: 550px;
   }
 
-  .package5 {
-    margin-bottom: 75px;
+  .ribbon.bad {
+    margin-left: -33px;
   }
 
   /*^ FAQ */
-
   div.faq {
     max-width: none;
-  }
-
-  .answer.last {
-    margin-bottom: 35px;
   }
 }
